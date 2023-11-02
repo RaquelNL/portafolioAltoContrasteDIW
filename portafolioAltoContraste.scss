@@ -1,0 +1,100 @@
+/* Colores de alto contraste para fondo y texto */
+$color-background-high-contrast: black; // Establece el color de fondo de alto contraste como negro
+$color-text-high-contrast: yellow; // Establece el color de texto de alto contraste como amarillo
+
+/* Mixin con parámetros que define estilos para un botón */
+@mixin boton($background-color, $text-color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  margin: 5px 0;
+  background-color: $background-color; // Color de fondo del botón
+  color: $text-color; // Color de texto del botón
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(100% - 10px);
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+  font-family: 'Open Sans', sans-serif; // Establece la familia de fuentes para el cuerpo del documento
+  margin: 0;
+  padding: 0;
+  background-color: black; // Establece el color de fondo del cuerpo del documento como negro
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: black;
+  color: yellow;
+  padding: 40px;
+}
+
+/* Estilos para los elementos del menú */
+.menu-item a {
+  text-decoration: none;
+  color: yellow;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+  background-color: black;
+  color: yellow;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para los enlaces del menú de la barra lateral */
+.sidebar-menu a {
+  text-decoration: none;
+  color: yellow;
+}
+
+/* Estilos para el botón con la clase .boton utilizando el mixin definido anteriormente */
+.boton {
+  @include boton(black, yellow); // Aplica el mixin de botón con colores de fondo y texto negro y amarillo respectivamente
+}
+
+/* Estilos para las tarjetas */
+.card {
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: black;
+}
+
+/* Estilos para el texto de encabezado dentro de las tarjetas */
+.card h4 {
+  font-size: 17px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Estilos para el texto de párrafo dentro de las tarjetas */
+.card p {
+  padding-left: 10px;
+  font-size: 15px;
+  color: yellow;
+}
+
+/* Estilos para el pie de página */
+.footer {
+  background-color: black;
+  color: yellow;
+  text-align: left;
+  padding: 20px;
+  font-size: 24px;
+  font-family: 'Gabarito', cursive;
+  font-style: italic;
+}

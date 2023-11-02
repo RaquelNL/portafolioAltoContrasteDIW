@@ -1,0 +1,96 @@
+/* Mixin con parámetros que define estilos para un botón */
+@mixin boton($background-color, $text-color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin: 5px 0;
+    background-color: $background-color; // Establece el color de fondo del botón según el parámetro
+    color: $text-color; // Establece el color de texto del botón según el parámetro
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 10px);
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Open Sans', sans-serif; // Establece la familia de fuentes para el cuerpo del documento
+    margin: 0;
+    padding: 0;
+    background-color: pink; // Establece el color de fondo del cuerpo del documento como rosa claro
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: plum; // Establece el color de fondo del encabezado como ciruela
+    color: black; // Establece el color del texto del encabezado como negro
+    padding: 40px;
+}
+
+/* Estilos para los elementos del menú */
+.menu-item a {
+    text-decoration: none;
+    color: black; // Establece el color de los elementos del menú como negro
+    transition-duration: 0.3s;
+    font-weight: bold;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    background-color: plum; // Establece el color de fondo de la barra lateral como ciruela
+    color: black; // Establece el color del texto de la barra lateral como negro
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para los enlaces del menú de la barra lateral */
+.sidebar-menu a {
+    text-decoration: none;
+    color: black; // Establece el color de los enlaces del menú de la barra lateral como negro
+}
+
+/* Estilos para el botón con la clase .boton utilizando el mixin definido anteriormente */
+.boton {
+    @include boton(pink, black); // Aplica el mixin de botón con colores de fondo y texto rosa claro y negro respectivamente
+}
+
+/* Estilos para las tarjetas */
+.card {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: lightblue; // Establece el color de fondo de las tarjetas como azul claro
+}
+
+/* Estilos para el texto de encabezado dentro de las tarjetas */
+.card h4 {
+    font-size: 17px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: black; // Establece el color del texto del encabezado de las tarjetas como negro
+}
+
+/* Estilos para el texto de párrafo dentro de las tarjetas */
+.card p {
+    padding-left: 10px;
+    font-size: 15px;
+    color: black; // Establece el color del texto de párrafo de las tarjetas como negro
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: plum; // Establece el color de fondo del pie de página como ciruela
+    color: black; // Establece el color del texto del pie de página como negro
+    text-align: left;
+    padding: 20px;
+    font-size: 24px;
+    font-family: 'Gabarito', cursive;
+    font-style: italic;
+}
